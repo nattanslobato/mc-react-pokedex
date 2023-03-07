@@ -1,11 +1,11 @@
-
+import { BackgroundImage } from "./styles"
 
 function Background() {
     return (
-        <div>
-            Background
-        </div>
-    );
+        <>
+            <BackgroundImage />
+        </>
+    )
 }
 
-export default Background;
+export default Background

@@ -1,21 +1,26 @@
-import { CardContainer, CardInfo, Container, Code, Name, CardImage, Photo } from './styles';
+import { useTheme } from 'styled-components'
+import { Container, CardContainer, CardInfo, Code, Name, CardImage, Photo } from './styles'
 
-function PokemonCard(){
+function PokemonCard({ code, name, src, color, }) {
+    const theme = useTheme()
+
     return (
-        <div>
-            <Container>
+        <>
+            <Container color={theme.color.backgroundType[color ? color[0].type.name : 'transparent']}>
                 <CardContainer>
                     <CardInfo>
-                        <Code>#1</Code>
-                        <Name>Bulbusaur</Name>
+                        <Code>#{code}</Code>
+                        <Name>{name}</Name>
                     </CardInfo>
+
                 </CardContainer>
                 <CardImage>
-                    <Photo src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"}/>
+                    <Photo src={src} />
                 </CardImage>
             </Container>
-        </div>
-        );
+        </>
+
+    )
 }
 
-export default PokemonCard;
+export default PokemonCard

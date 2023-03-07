@@ -1,10 +1,12 @@
-import styled from "styled-components";
-import { ReactComponent as Pokeball } from "../../assets/images/pokeball.svg";
+import styled from "styled-components"
 
-export const BackgroundImage = styled(Pokeball)`
-position: fixed;
-width: 100%;
-height: 100vh;
-z-index: -1;
-fill: ${({theme}) => theme.color.whiteMedium};
+export const HomeContainer = styled.div`
+margin: 1rem 6rem;
+`
+
+export const CardContainer = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+max-width: 100%;
+gap: 50px;
 `
